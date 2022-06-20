@@ -9,6 +9,8 @@ game.Players.LocalPlayer.Character.Humanoid.BreakJointsOnDeath = false
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.Name = "old"
 
+game.Players.LocalPlayer.Character.Humanoid.BreakJointsOnDeath = true
+
 local OldNameCall = nil
 
 OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
